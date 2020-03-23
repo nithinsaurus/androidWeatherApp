@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.weatherapp.MainActivity">
+
+    <TextView
+        android:id="@+id/darkskycredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dark Sky Weather API"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pastWeather" />
+
+    <Button
+        android:id="@+id/currentWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Weather"
+        app:layout_constraintBottom_toTopOf="@+id/nextFiveHours"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextWeek" />
+
+    <Button
+        android:id="@+id/nextFiveHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Five Hour Forecast"
+        app:layout_constraintBottom_toTopOf="@+id/averageTwoDays"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentWeather" />
+
+    <Button
+        android:id="@+id/averageTwoDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average Weather for 2 Days"
+        app:layout_constraintBottom_toTopOf="@+id/pastWeather"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextFiveHours" />
+
+    <Button
+        android:id="@+id/nextWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Week's Forecast"
+        app:layout_constraintBottom_toTopOf="@+id/currentWeather"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coordinatesButton" />
+
+    <Button
+        android:id="@+id/pastWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature History"
+        app:layout_constraintBottom_toTopOf="@+id/darkskycredit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/averageTwoDays" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TRACK LOCATION BEFORE USING SERVICES"
+        android:textColor="#0A0101"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/coordinatesButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/coordinatesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track Location"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nextWeek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
